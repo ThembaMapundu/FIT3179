@@ -14,6 +14,14 @@
     <h1>Energy production in Australia</h1>
     <div id="Stackedbar_chart">
     </div>
+
+var vg_1 = "./Visuals/stackedbar.json";
+    
+vegaEmbed("#Stackedbar_chart", vg_1).then(function(result) {
+    // Access the Vega view instance 
+    // (https://vega.github.io/vega/docs/api/view/) as result.view
+
+}).catch(console.error);
     
 </body>
 </html>
