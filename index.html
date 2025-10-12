@@ -7,22 +7,19 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-    <title>Energy Production in Australia</title>
+    <script src="vega_lite_vis.js"></script>
+    <title>First Vega-Lite graph </title>
 </head>
 <body>
-    <h1>Energy Production in Australia</h1>
-    <div id="Stackedbar_chart"></div>
+    <h1>Energy production in Australia</h1>
+    <div id="Stackedbar_chart">
+    </div>
+var vg_1 = "./Visuals/stackedbar.json";
 
-    <script type="text/javascript">
-        // Your Vega-Lite specification goes here
-        var vg_1 = {
-          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-          // ... your entire JSON specification from earlier ...
-        };
-        
-        vegaEmbed("#Stackedbar_chart", vg_1).then(function(result) {
-            // Access the Vega view instance
-        }).catch(console.error);
-    </script>
+vegaEmbed("#Stackedbar_chart", vg_1).then(function(result) {
+    // Access the Vega view instance 
+    // (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);  
+    
 </body>
 </html>
